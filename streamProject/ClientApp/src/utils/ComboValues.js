@@ -1,0 +1,9 @@
+﻿export const wineBrands = ['JP', 'Monte Velho', 'Casal Garcia', 'Mula Velha', 'Porta da Ravessa', 'Muralhas', 'Pêra Doce', 'Pegões', 'Tapada Das Lebres', 'Guarda Rios', 'Gazela', 'Vidigueira', 'Papa Figos', 'Dona Ermelinda', 'Esteva']
+export const wineTypes = ['Red', 'White', 'Green', 'Rose'];
+export const wineRegions = ['Douro', 'Alentejo', 'Dão', 'Bairrada'];
+export const wineSections = ['Warehouse 1', 'Warehouse 2', 'Warehouse 3', 'Warehouse 4', 'Warehouse 5', 'Warehouse 6', 'Warehouse 7'];
+export const wineDivision = ['Division 1', 'Division 2', 'Division 3', 'Division 4', 'Division 5', 'Division 6', 'Division 7'];
+export const beerBrands = ['Sagres', 'Super Bock', 'Cristal', 'Heineken', 'Carlsberg', 'Vadia', 'Estrela', 'Da Borda', 'Franziskaner', 'Tagos', 'Budweiser', 'ipa', 'Bud Light']
+export const beerTypes = ['Blonde', 'Black', 'Artesanal'];
+export const beerSections = ['Warehouse 1', 'Warehouse 2', 'Warehouse 3', 'Warehouse 4', 'Warehouse 5', 'Warehouse 6', 'Warehouse 7'];
+export const beerDivision = ['Division 1', 'Division 2', 'Division 3', 'Division 4', 'Division 5', 'Division 6', 'Division 7'];

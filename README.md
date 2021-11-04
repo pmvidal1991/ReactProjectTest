@@ -1,20 +1,36 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# WineBeerCellar
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## INTRODUCTION
+------------
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+This is a small web application to manage a cellar where the user can consult the wine and beer list, view the details of a wine or beer and add a new wine or beer.
+Stack: .net core, React, microsoft SQL Server
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## REQUIREMENTS
+------------
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+This application requires the following:
+
+```bash
+Visual Studio 2019
+Microsoft SQL SERVER
+```
+## Usage
+
+```bash
+You must install the database (is inside the folder 'db' on the main repo folder).
+Then open the solution with visual studio, that is inside the main repo folder ,
+and Before running the application, In the folder "ClienteApp" , that is inside the folder "wineBeerCellar" , you will find the folder public, where you change the endpoint for your address inside the file "envconfig.js".
+Then inside the folder "wineBeerCellar", you have the file "appSettings.json" where you can change the database path.
+Now you can run the application with VS2019.
+You can see the login credentials , inside the database, table "Users".
+
+```
+
+## Architecture
+
+![Screenshot](screenshot.png)
+
+```bash
+I used the selected template on the image above, that integrates .Net Core web api with a React Client App.
+```

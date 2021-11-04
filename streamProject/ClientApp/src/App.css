@@ -1,0 +1,39 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    background-image: url(https://media.gazetadopovo.com.br/haus/2018/08/adegas-projeto-arquitetura-decoracao-dicas-como-montar-todos-espacos-e-orcamentos-12-cpia-768x512-995c0210.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

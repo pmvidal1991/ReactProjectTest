@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "accolade-design-system": ["../node_modules/@bcp-nextgen-dx-component-factory/accolade-design-system"],
+      "@api": ["api"],
+      "@api/*": ["api/*"],
+      "@assets": ["assets"],
+      "@assets/*": ["assets/*"],
+      "@components": ["ui/components"],
+      "@components/*": ["ui/components/*"],
+      "@config": ["configs"],
+      "@config/*": ["configs/*"],
+      "@contexts": ["contexts"],
+      "@contexts/*": ["contexts/*"],
+      "@displayGroups": ["ui/display-groups"],
+      "@displayGroups/*": ["ui/display-groups/*"],
+      "@hooks": ["hooks"],
+      "@hooks/*": ["hooks/*"],
+      "@i18n": ["i18n"],
+      "@i18n/*": ["i18n/*"],
+      "@layout": ["ui/layout"],
+      "@layout/*": ["ui/layout/*"],
+      "@utils": ["utils"],
+      "@utils/*": ["utils/*"],
+      "@store": ["store"],
+      "@store/*": ["store/*"]
+    }
+  }
+}

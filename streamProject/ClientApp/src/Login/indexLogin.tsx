@@ -5,6 +5,7 @@ import LocalBarIcon from '@material-ui/icons/LocalBar';
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import * as LoginActions from "../redux/actions/LoginActions";
+import * as WinesActions from "../redux/actions/WinesActions";
 import { Action } from "redux";
 import { loginPropsInterface, loginFormInitialValuesInterface, loginFormPropsInterface, LoginResponse } from "./LoginInterfaces";
 import "./LoginPage.css";
@@ -23,18 +24,19 @@ import { initialStateModel, initialState } from "../redux/initialState";
 import { ThunkDispatch } from "redux-thunk";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { AxiosError } from "axios";
+import { wineFilters } from "../Wine/WineInterfaces";
 
 const Login: React.FC<loginPropsInterface | null> = props =>
 {
-    const { isLoading, login, userisLoading, Error, loginError } = props;
+    const { isLoading, login, userisLoading, Error, loginError, setWines } = props;
     let history = useHistory();
     let { from } = { from: { pathname: "/Homepage" } };
 
-    //const setAppValues = async () =>
-    //{
-    //    await setBeers({ brand: '', type: '', region: '', section: '', division: '' });
-    //    await setWines({ brand: '', type: '', region: '', section: '', division: '' });
-    //};
+    const setAppValues = async () =>
+    {
+        //await setBeers({ brand: '', type: '', region: '', section: '', division: '' });
+        await setWines({ brand: '', type: '', region: '', section: '', division: '' });
+    };
     const login1 = async (values: loginFormInitialValuesInterface, { setSubmitting }: any) =>
     {
         //setLoading(true);
@@ -58,7 +60,7 @@ const Login: React.FC<loginPropsInterface | null> = props =>
                     {
                         // actions.login(user);
                         userisLoading(false);
-                        // setAppValues();
+                        setAppValues();
 
                         const ToastMsg = () => (
                             <div style={{ fontSize: "20px" }}>Welcome: {user.Username}</div>
@@ -136,6 +138,7 @@ function mapDispatchToProps(dispatch: ThunkDispatch<initialStateModel, void, Act
         login: (arg: FormData | null) => dispatch(LoginActions.login(arg)),
         userisLoading: (arg: boolean) => dispatch(LoginActions.userisLoading(arg)),
         loginError: (arg: AxiosError | null) => dispatch(LoginActions.loginError(arg)),
+        setWines: (arg: wineFilters) => dispatch(WinesActions.setWines(arg)),
     };
 }
 export default connect(mapStateToProps, mapDispatchToProps as any)(Login)

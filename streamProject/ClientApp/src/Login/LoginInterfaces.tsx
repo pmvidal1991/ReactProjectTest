@@ -1,4 +1,5 @@
 ﻿import { AxiosError } from "axios";
+import { wineFilters } from "../Wine/WineInterfaces";
 export interface loginPropsInterface
 {
     isLoading: boolean;
@@ -6,6 +7,7 @@ export interface loginPropsInterface
     userisLoading: (arg: boolean) => { type: string; isLoading: boolean };
     Error: ErrorBoundaryInterface;
     loginError: (arg: AxiosError | null) => Promise<any>;
+    setWines: (arg: wineFilters) => Promise<any>;
 
 }
 export interface loginFormPropsInterface

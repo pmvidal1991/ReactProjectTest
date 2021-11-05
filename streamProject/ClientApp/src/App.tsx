@@ -14,11 +14,13 @@ import configureStore from './redux/configureStore'
 import { Provider as ReduxProvider, } from 'react-redux';
 import Login from './Login/indexLogin'
 import HomePage from './HomePage/indexHome'
+import WinePage from './Wine/indexWine'
 import { PersistGate } from 'redux-persist/integration/react'
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { initialState } from "./redux/initialState";
 const { store, persistor } = configureStore(initialState);
+
 
 const App: React.FC = () =>
 {
@@ -33,6 +35,9 @@ const App: React.FC = () =>
                         <Switch>
                             <PrivateRoute exact path="/Homepage">
                                 <HomePage />
+                            </PrivateRoute>
+                            <PrivateRoute exact path="/Wine">
+                                <WinePage />
                             </PrivateRoute>
                             <Route path="/">
                                 <Login />

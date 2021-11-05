@@ -22,10 +22,34 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\api\WineApi.tsx" />
+    <None Remove="ClientApp\src\redux\actions\WinesActions.tsx" />
+    <None Remove="ClientApp\src\redux\reducers\Wines\WinesReducer.tsx" />
+    <None Remove="ClientApp\src\Wine\components\ErrorBoundary.tsx" />
+    <None Remove="ClientApp\src\Wine\components\Forms\AddWineForm.tsx" />
+    <None Remove="ClientApp\src\Wine\components\Forms\DetailsWineForm.tsx" />
+    <None Remove="ClientApp\src\Wine\components\MenuComponent.tsx" />
+    <None Remove="ClientApp\src\Wine\components\Modals\AddWineModal.tsx" />
+    <None Remove="ClientApp\src\Wine\components\Modals\WineDetailsModal.tsx" />
+    <None Remove="ClientApp\src\Wine\components\table\WineTableComponent.tsx" />
+    <None Remove="ClientApp\src\Wine\indexWine.tsx" />
+    <None Remove="ClientApp\src\Wine\WineInterfaces.tsx" />
     <None Remove="ClientApp\types\react-modal-image\index.d.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\api\WineApi.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\redux\actions\WinesActions.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\redux\reducers\Wines\WinesReducer.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\Wine\components\ErrorBoundary.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\Wine\components\Forms\AddWineForm.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\Wine\components\Forms\DetailsWineForm.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\Wine\components\MenuComponent.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\Wine\components\Modals\AddWineModal.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\Wine\components\Modals\WineDetailsModal.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\Wine\components\table\WineTableComponent.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\Wine\indexWine.tsx" />
+    <TypeScriptCompile Include="ClientApp\src\Wine\WineInterfaces.tsx" />
     <TypeScriptCompile Include="ClientApp\types\react-modal-image\index.d.ts" />
   </ItemGroup>
 

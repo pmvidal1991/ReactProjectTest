@@ -30,8 +30,7 @@ const useStyles2 = makeStyles(theme => ({
     }
 }));
 
-const HomePage: React.FC<HomePagePropsInterface | null> = props =>
-{
+const HomePage: React.FC<HomePagePropsInterface | null> = props => {
     const {
         user,
         login,
@@ -39,12 +38,10 @@ const HomePage: React.FC<HomePagePropsInterface | null> = props =>
     const buttonClasses = useStyles2();
     const [loader, setLoader] = useState(false);
     const history = useHistory();
-    const showLoader = () =>
-    {
+    const showLoader = () => {
         setLoader(true);
     };
-    const closeLoader = () =>
-    {
+    const closeLoader = () => {
         setLoader(false);
     };
     return (
@@ -64,24 +61,22 @@ const HomePage: React.FC<HomePagePropsInterface | null> = props =>
 
                                     <div className="col-md-6">
                                         <div className="row noMargin">
-                                            <Button className={buttonClasses.root} onClick={() =>
-                                            {
+                                            <Button className={buttonClasses.root} onClick={() => {
                                                 history.push("/Wine");
                                             }}>
                                                 Wine
-                      </Button>
+                                            </Button>
                                         </div>
                                     </div>
-                      {/*              <div className="col-md-6">*/}
-                      {/*                  <div className="row noMargin">*/}
-                      {/*                      <Button className={buttonClasses.root} onClick={() =>*/}
-                      {/*                      {*/}
-                      {/*                          history.push("/Beer");*/}
-                      {/*                      }}>*/}
-                      {/*                          Beer*/}
-                      {/*</Button>*/}
-                      {/*                  </div>*/}
-                      {/*              </div>*/}
+                                    <div className="col-md-6">
+                                        <div className="row noMargin">
+                                            <Button className={buttonClasses.root} onClick={() => {
+                                                history.push("/Beer");
+                                            }}>
+                                                Beer
+                                            </Button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-md-2" />
@@ -92,14 +87,12 @@ const HomePage: React.FC<HomePagePropsInterface | null> = props =>
         </div>
     );
 }
-function mapStateToProps(state: initialStateModel)
-{
+function mapStateToProps(state: initialStateModel) {
     return {
         user: state.Login,
     };
 }
-function mapDispatchToProps(dispatch: ThunkDispatch<initialStateModel, void, Action>)
-{
+function mapDispatchToProps(dispatch: ThunkDispatch<initialStateModel, void, Action>) {
     return {
         login: (arg: FormData | null) => dispatch(LoginActions.login(arg)),
     };
